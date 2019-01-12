@@ -25,7 +25,7 @@ SECRET_KEY = '!*dmbhoem$$m$31t!9m#^*f9wm5#n!471+8613_-r3ruwdgb!)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
