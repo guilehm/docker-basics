@@ -3,12 +3,12 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
-[packages]
-django = "*"
-"psycopg2" = "*"
-awsebcli = "*"
-
 [dev-packages]
+
+[packages]
+"psycopg2" = "*"
+django = "*"
+uwsgi = "*"
 
 [requires]
 python_version = "3.6"
