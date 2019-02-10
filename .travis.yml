@@ -17,9 +17,5 @@ install:
   - docker-compose -v
   - docker -v
 
-before_script:
-  - docker exec docker-basics_db_1 bash -c "su postgres && psql -c 'create database dockerdb;' -U postgres"
-  - docker exec docker-basics_web_1 bash -c "python manage.py migrate"
-
 script:
   - docker-compose run test
