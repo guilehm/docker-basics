@@ -10,18 +10,13 @@ services:
 
 env:
   - DJANGO=2.1.5
-
-before_install:
-  - export DJANGO_SETTINGS_MODULE=docker.settings
-  - export PYTHONPATH=$HOME/builds/guilehm/docker-basics
-  - export PIP_USE_MIRRORS=true
+  - DOCKER_COMPOSE_VERSION=1.4.2
 
 install:
   - pip install -r requirements.txt
   - docker-compose -v
   - docker -v
 
-before_script:
-  - psql -c 'create database dockerdb;' -U postgres
-  - python manage.py migrate
-  - python manage.py test
+script:
+  - docker-compose run --rm web python manage.py test --verbosity=2
+
