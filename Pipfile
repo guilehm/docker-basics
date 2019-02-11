@@ -10,6 +10,7 @@ django = "*"
 psycopg2 = "*"
 dj-database-url = "*"
 docker-compose = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.6"
