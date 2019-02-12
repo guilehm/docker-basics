@@ -14,12 +14,3 @@ services:
       - "8000:8000"
     depends_on:
       - db
-  test:
-    build: .
-    environment:
-      - DATABASE_URL=postgres://postgres@db:5432/dockerdb
-    command: python manage.py test
-    domainname: docker.local
-    links:
-      - db
-      - web

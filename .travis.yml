@@ -18,5 +18,5 @@ install:
   - docker -v
 
 script:
-  - docker-compose run --rm web python manage.py test --verbosity=2
+  - docker-compose exec web python manage.py test --verbosity=2
 
